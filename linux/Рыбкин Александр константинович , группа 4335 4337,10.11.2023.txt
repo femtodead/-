@@ -1,0 +1,19 @@
+  991  cat
+  992  cat > pets.txt
+  993  clear
+  994  cat > pets.txt
+  995  cat > PackAnimals.txt
+  996  cat Pets.txt PackAnimals.txt > HumanFriends.txt
+  997  cat pets.txt PackAnimals.txt > HumanFriends.txt
+  998  cat HumanFriends.txt
+  999  mkdir animals
+ 1000  mv HumanFriends.txt animals/
+ 1001  tree
+ 1026  cd загрузки
+ 1027  cd Загрузки/
+ 1028  ll
+ 1029  sudo dpkg -i mysql-apt-config_0.8.28-1_all.deb
+ 1036  sudo apt-get install mysql-server
+
+
+решил раз устанавливать mysql то можно сразу из dep файла с помощью dpkg(удалять соответственно не стал)
