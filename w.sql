@@ -60,3 +60,30 @@ union
 select *, 'pets' as 'table_name'  from pets
 union
 select id,name,command,BirthDate,type, 'young_animals' as 'table_name'  from young_animals;-- Объединение всех таблиц с названиями этих таблиц
+
+
+create table dog as select * from pets where type = "Dog";  -- Создание недостающих таблиц(с 65 по 89) (как и раньше для нормального вида манипуляции с id) + отсутствие верблюдов так как было задание с их удалениями соответственно они не нужны
+ALTER TABLE `dog` CHANGE COLUMN `id` `id` INT NULL DEFAULT '0' ;
+UPDATE dog SET id = NULL;
+ALTER TABLE `dog` CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ,ADD PRIMARY KEY (`id`);
+
+create table cat as select * from pets where type = "Cat";
+ALTER TABLE `cat` CHANGE COLUMN `id` `id` INT NULL DEFAULT '0' ;
+UPDATE cat SET id = NULL;
+ALTER TABLE `cat` CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ,ADD PRIMARY KEY (`id`);
+
+create table hamster as select * from pets where type = "Hamster";
+ALTER TABLE `hamster` CHANGE COLUMN `id` `id` INT NULL DEFAULT '0' ;
+UPDATE hamster SET id = NULL;
+ALTER TABLE `hamster` CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ,ADD PRIMARY KEY (`id`);
+
+create table horse as select * from pets where type = "Horse";
+ALTER TABLE `horse` CHANGE COLUMN `id` `id` INT NULL DEFAULT '0' ;
+UPDATE horse SET id = NULL;
+ALTER TABLE `horse` CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ,ADD PRIMARY KEY (`id`);
+
+
+create table donkey as select * from pets where type = "Donkey";
+ALTER TABLE `donkey` CHANGE COLUMN `id` `id` INT NULL DEFAULT '0' ;
+UPDATE donkey SET id = NULL;
+ALTER TABLE `donkey` CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ,ADD PRIMARY KEY (`id`);
