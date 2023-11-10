@@ -38,7 +38,7 @@ public class AnimalsRegistry {
         this.registry = registry;
     }
 
-    public Animals classCheck(String className){
+    public Animals classCheck(String className){ // сверяется с списком известных нам животных и создает нужный экземпляр класса 
         for (int i = 0; i < classNameLinkedList.size(); i++) {
             if (classNameLinkedList.get(i).equalsIgnoreCase(className)){
                 if (i == 0){
@@ -61,10 +61,10 @@ public class AnimalsRegistry {
                 }
             }
         }
-        return new Animals(null, null, className, null, null);
+        return new Animals(null, null, className, null, null); //если не находит нужного потомка создает родителя
     }
 
-    public boolean add(Animals animals){
+    public boolean add(Animals animals){ // добавление в регистр
         for (Animals ex : registry) {
             if (ex == animals){
                 return false;
@@ -75,7 +75,7 @@ public class AnimalsRegistry {
     }
 
 
-    public Animals CheckAnimals(String name){
+    public Animals CheckAnimals(String name){ // поиск по животному
         for (Animals ex : registry) {
             if (ex.getName().equalsIgnoreCase(name)){
                 return ex;

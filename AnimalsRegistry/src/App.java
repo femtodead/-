@@ -1,5 +1,4 @@
 import Controler.Controller;
-import Model.Animals;
 import Model.AnimalsRegistry;
 import View.View;
 
